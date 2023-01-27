@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partnerlogistic</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/themify-icons.css">
+        <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+        <!-- <link rel="stylesheet" href="css/bootstrap-reboot.min.css"/>
+        <link rel="stylesheet" href="css/main.css"/> -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="script/gsap.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+        </head>
+<body data-spy="scroll" data-target="#navbar" data-offset="30">
+
+    <div class="nav__header">
+    <div class="nav-menu fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-dark navbar-expand-lg">
+                        <a class="navbar-brand" href="index.html"><img src="./img/logo.png" class="img-fluid" alt="logo"></a>
+                            <button class="navbar-toggler" 
+                            type="button" data-toggle="collapse"
+                            data-target="#navbar" aria-controls="navbar" 
+                            aria-expanded="false" aria-label="Toggle navigation"> 
+                            <span class="navbar-toggler-icon"></span> 
+                            </button>
+                        <div class="collapse navbar-collapse" id="navbar">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item"> <a class="nav-link active" href="#about_us">О нас <span class="sr-only">(current)</span></a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#car">Автопарк</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#advantages">Преимущества</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#reviews">Отзывы</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#form">Контакты</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="tel:89193838762">+7 (919) 383 87 62</a> </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="bg-header">
+        
+        <div class="img-holder center mt-3">
+            <img src="./img/box.png" alt="box1" class="box__one box" >
+            <img src="./img/box.png" alt="box2" class="box__two box">
+            <img src="./img/car.png" alt="car" class="img-fluid img-car center">
+            <img src="./img/car2.png" alt="car" class="img-fluid img-car2 center">
+            <img src="./img/box.png" alt="box3" class="box__three box">
+            <img src="./img/box.png" alt="box4" class="box__four box">
+            <h1 class="header__big text_insade_car tracking-in-expand">PARTNER LOGISTIC</h1>
+            <p class="header__big_title text_insade_car tracking-in-expand">Грузоперевозки по России и странам СНГ </p>
+            <p class="header__big_city tracking-in-expand" >Екатеринбург - Омск - Москва - Казань - Питер - Челябинск - Новосибирск </p>
+        </div>
+    </header>
+</div>
+
+<div class="feed">
+    <div class="feedback__title">
+        <h1> <mark style="color:#E6B556; background: #08444a;">Закажите</mark><br> расчет стоимости</h1>
+
+    </div>
+<div class="feedback center">
+    <form enctype="multipart/form-data" method="post" id="form"  onsubmit="send(event, 'send.php')">
+        <label>
+            Фамилия
+            <input id="family" name="family" required autocomplete="family-name" minlength="1" pattern="\s*\S([\s\S]*\S)?\s*"
+                data-custom-validity="Введите свою фамилию!"
+                placeholder="Иванов"
+                autocomplete="off">
+        </label>
+    
+        <label>
+            Имя
+            <input id="name" name="name" required autocomplete="given-name" minlength="1" pattern="\s*\S([\s\S]*\S)?\s*"
+                data-custom-validity="Введите своё имя!"
+                placeholder="Иван"
+                autocomplete="off">
+        </label>
+    
+        <label>
+            Телефон
+            <input id="phone" name="phone" type="tel" required 
+                data-custom-validity="Введите свой номер телефона!"
+                placeholder="+7 ..."
+                autocomplete="off">
+        </label>
+    
+        <label>
+            Э-почта
+            <input id="email" name="email" type="email" required 
+                data-custom-validity="Введите свой Email!"
+                placeholder="email@email.ru"
+                autocomplete="off">
+        </label>
+    
+        <label>
+            Сообщение
+            <textarea id="next" name="text" required minlength="10" maxlength="1500"
+                data-custom-validity="Заполните поле (от 10 до 1500 символов)!"
+                placeholder="Укажите города, тип посылки, либо вопрос, который у вас мог возникнуть"
+                style="height: 80px;"></textarea>
+        </label>
+    
+        <button type="submit" class="button right">Заказать </button>
+        <p class="form__text" style="text-align: center;
+        font-size: 12px;
+        color: grey;">Нажимая на кнопку, Вы соглашаетесь на обработку Ваших персональных данных.</p>
+        
+    </form>
+
+</div></div>   
+    <div class="msg" onclick="gsapMsg.reverse()">Сообщение</div>
+
+<div class="about__us"  id="about_us">
+    <h1 class="about__us_big" data-aos="fade-right">О транспортной компании</h1>
+    <h1 class="about__us_bold" data-aos="fade-right">PARTNЕR LOGISTIC</h1>
+    <p class="about__us_text"  data-aos="fade-right">Молодая, развивающаяся транспортная компания PARTNER LOGISTIC, с радостью поможет Вам перевезти груз из любой точки России. <br> <br>
+        Мы облегчим вашу отправку и сделаем лучше, качественней, быстрей и дешевле. <br> <br>
+        Подберем нужную для вас машину и сделаем расчёт по цене. <br> <br>
+        Также, PARTNER LOGISTIC готов предоставить машину, если Вам она нужна именно сегодня! <br> <br>
+        Каждому заказчику мы предоставим персонального менеджера, который будет от начала и до конца сопровождать Вашу грузоперевозку! Именно он сделает вашу отправку, менее волнительной! <br> <br>
+        Заинтересовало? <br> <br>
+        Ждём вашего звонка! <br> <br>
+        Надеемся на взаимовыгодное сотрудничество!<br><br>
+        <a class="footer__href" href="tel:89193838762">+7 (919) 383 87 62</a>
+    </p>
+        
+</div>
+
+
+
+<!-- карточки машин -->
+
+
+<div class="card_swiper center"  id="car" data-aos="fade-right">
+    <h1 class="card__big">НАШ АВТОПАРК</h1>
+    <p class="card__title">Мы предлагаем Вам 6 машин</p>
+</div>
+<div class="swiper mySwiper" data-aos="fade-up">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="card__car">
+            <img class="card__img" src="./img/1,2.png" alt="1.2t">
+            <div class="card__info">Объем: <br>
+                12 кубических метра <br>
+               <br>
+               Габариты: <br>
+               3.2 * 2.1 * 2.1 метра <br>
+               <br>
+               Грузоподъемность:<br>
+               1.2 тонны</div>
+            <a href="#form" class="card__button">Выбрать</a>
+            </div>
+      </div>
+      <div class="swiper-slide">        
+        <div class="card__car">
+        <img class="card__img" src="./img/1,5.png" alt="1.5t">
+        <div class="card__info">Объем: <br>
+            18 кубических метра <br>
+           <br>
+           Габариты: <br>
+           4.2 * 2.1 * 2.1 метра  <br>
+           <br>
+           Грузоподъемность:<br>
+           1.5 тонны</div>
+        <a href="#form" class="card__button">Выбрать</a>
+        </div>
+    </div>
+      <div class="swiper-slide">
+        <div class="card__car">
+            <img class="card__img" src="./img/3 т.png" alt="3t">
+            <div class="card__info">Объем: <br>
+                22 кубических метра <br>
+               <br>
+               Габариты: <br>
+               5.2 * 2.2 * 2.2 метра  <br>
+               <br>
+               Грузоподъемность:<br>
+               3 тонны</div>
+            <a href="#form" class="card__button">Выбрать</a>
+            </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card__car">
+            <img class="card__img" src="./img/5т.png" alt="5t">
+            <div class="card__info">Объем: <br>
+                30 кубических метра <br>
+               <br>
+               Габариты: <br>
+               6.2 * 2.2 * 2.2 метра  <br>
+               <br>
+               Грузоподъемность:<br>
+               5 тонн</div>
+            <a href="#form" class="card__button">Выбрать</a>
+            </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card__car">
+            <img class="card__img" src="./img/10т.png" alt="10t">
+            <div class="card__info">Объем: <br>
+                40-50 кубических метра <br>
+               <br>
+               Габариты: <br>
+               7-8 * 2.4 * 2.4 метра  <br>
+               <br>
+               Грузоподъемность:<br>
+               10 тонн</div>
+            <a href="#form" class="card__button">Выбрать</a>
+            </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card__car">
+            <img class="card__img" src="./img/20т.png" alt="20t">
+            <div class="card__info">Объем: <br>
+               82 кубических метра <br>
+               <br>
+               Габариты: <br>
+               13.6 * 2.4 * 2.4 метра  <br>
+               <br>
+               Грузоподъемность:<br>
+               20 тонн</div>
+            <a href="#form" class="card__button">Выбрать</a>
+            </div>
+      </div>
+    </div>
+      <div class="swiper-button-next" style="right: 0;"></div>
+      <div class="swiper-button-prev" style="left: 0;"></div>
+    <div class="swiper-pagination"></div>
+</div>
+
+
+
+  <!-- Наши приемущества  -->
+
+    <div class="advantages" id="advantages">
+        <h1 class="advantages__big" data-aos="fade-right">Наши преимущества</h1>
+        <div class="about__container" data-aos="fade-right">
+            <img class="about__container_img" src="./img/1.png" alt="">
+            <div class="about__container_text">
+                <h3>Время работы</h3>
+                <p>Наши водители и диспетчеры доступны 24 часа 7 
+                    дней в неделю.
+
+                </p>
+            </div>
+        </div>
+        <div class="about__container" data-aos="fade-right">
+            <img class="about__container_img" src="./img/2.png" alt="">
+            <div class="about__container_text">
+                <h3>Только профессионалы</h3>
+                <p>С нами сотрудничают опытные грузчики во всех городах Российской
+                    Федерации.
+                </p>
+            </div>
+        </div>
+        <div class="about__container" data-aos="fade-right">
+            <img class="about__container_img" src="./img/3.png" alt="">
+            <div class="about__container_text">
+                <h3>Собственный автопарк</h3>
+                <p>Большой выбор нужной машины для Вашей грузоперевозки.
+                </p>
+            </div>
+        </div>
+        <div class="about__container" data-aos="fade-right">
+            <img class="about__container_img" src="./img/4.png" alt="">
+            <div class="about__container_text">
+                <h3>Логистика</h3>
+                <p>Представляем опытных менеджеров и логистов, 
+                    которые помогут Вам с любым вопросом.
+                </p>
+            </div>
+        </div>
+        <div class="about__container" data-aos="fade-right">
+            <img class="about__container_img" src="./img/5.png" alt="">
+            <div class="about__container_text">
+                <h3>Пакет документов</h3>
+                <p>Предоставим полный пакет документов, который 
+                    Вам будет необходим.
+                </p>
+            </div>
+        </div>
+        <div class="about__container" data-aos="fade-right">
+            <img class="about__container_img" src="./img/6.png" alt="">
+            <div class="about__container_text">
+                <h3>Доставка</h3>
+                <p>Доставим Ваш груз от двери до двери, никаких перегрузок.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- отзывы -->
+<div class="reviews" id="reviews">
+    <div class="reviews__content" data-aos="fade-right">
+    <h1 class="reviews__big">Отзывы о нашей компании</h1>
+    <p class="reviews__text">Отзывы о нашей компании вы можете прочитать на <br> следующих площадках </p>
+    <div class="reviews_container">
+        <div class="section__item item">
+          <div class="item__button">
+            <p class="item__text">Развернуть</p> 
+            <div class="arrow" id="arrow"><svg width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 1L13.5 15L25 1" stroke="black" stroke-width="3"/>
+                </svg>
+                </div>
+          </div>
+          <div class="item__content">
+            <div class="item__body">
+                Вы можете прочитать или оставить отзыв на следующих площадках:<br>
+                <div>
+                <a href="https://vk.com/partnerlogistic20" target="_blank"><img class="footer__icon" style="padding-right: 25px;" src="./img/vk.png" alt=""></a>
+                <a href="https://2gis.ru/ekaterinburg/firm/70000001065969601" target="_blank"><img class="footer__icon" src="./img/2gis.png" alt=""></a>
+            </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+    <div class="reviews__icon" data-aos="fade-left"><img class="reviews__icon_img" src="./img/icon.png" alt="icon"></div>
+</div>
+
+<!-- форма обратно свзяи  -->
+
+
+
+<footer class="footer">
+    <h1 class="footer__big">PARTNЕR LOGISTIC</h1>
+    <h3 class="footer__text">
+        Грузоперевозки по России и странам СНГ <br>
+        E-mail: <br><mark><a class="footer__href" href="mailto:partnerlogistic20@mail.ru">partnerlogistic20@mail.ru</a> </mark><br>
+        Номер горячей линии<br>
+        <mark> <a class="footer__href" href="tel:89193838762">+7 (919) 383 87 62</a></mark> <br>
+        ИП Винокуров Артем Андреевич <br>
+        ИНН: 7706092523, КПП 860143001 <br>
+        Почтовый и Юридический адрес: <br>
+        623285, Свердловская обл. г. Ревда, ул. Корабельная д. 1 <br>
+        ф-л Западно - Сибирский ПАО БАНКА "ФК Открытие"<br>
+        р\счет: 40802810600030021561, БИК 047162812<br>
+    </h3>
+    <div class="footer_icon_">
+        <a href="https://www.instagram.com/_partner_logistic__/" target="_blank"><img class="footer__icon" src="./img/in.png" alt="in"></a>
+        <a href="https://vk.com/id754918554" target="_blank"><img class="footer__icon" src="./img/vk.png" alt=""></a>
+        <a href="https://t.me/+79193838762" target="_blank"><img class="footer__icon" src="./img/tel.png" alt=""></a>
+        <a href="https://wa.me/79193838762" target="_blank"><img class="footer__icon" src="./img/wa.png" alt=""></a>
+    </div>
+       <p class="footer__arnik">Create by <a class="footer__arnik_a" href="https://t.me/arnikkkkkkkkkkkkk" target="_blank">Arnik</a></p>
+</footer>
+
+
+
+    <script src="script/jquery-3.2.1.min.js"></script>
+    <script src="script/bootstrap.bundle.min.js"></script>
+    <script src="script/scriptmenu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        breakpoints: {
+            1300: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+        },
+    960: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    950: {
+      slidesPerView: 1,
+      spaceBetween: 40,
+        },
+    550: {
+      slidesPerView: 1,
+      spaceBetween: 40,
+        },
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 40,
+        },
+  },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+    });</script>
+    <script src="script/smoothHeight.js"></script>
+    <script src="script/script.js"></script>
+    <script>
+        AOS.init({
+        offset: 200,
+        duration: 500,
+        easing: 'ease-in-quad',
+        delay: 200,
+    });
+      </script>
+   
+    
+</body>
+</html>

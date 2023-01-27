@@ -1,0 +1,288 @@
+@media (max-width:1220px) {
+    
+    .box__one {
+        left: 235px;
+    }
+    
+    .about__us {
+        grid-template-columns: repeat(8, 70px);
+
+        &_text {
+            grid-column: 1/8;
+        }
+    }
+
+    .advantages {
+        grid-template-columns: repeat(8, 70px);
+    }
+
+    .reviews {
+        display: grid;
+        grid-template-columns: repeat(8, 70px);
+        grid-column-gap: 32px;
+
+        &__icon {
+        width: 685px;
+        grid-column: 1/8;
+        &_img {
+            margin-left: 0;
+            grid-column: 1/8;
+        }
+        }
+
+        
+    }
+
+    .card_swiper {
+        text-align: center;
+    }
+
+    
+}
+
+
+@media (max-width: 990px) {
+
+    .img-car {
+        // scale: 1.2;
+        top: 82px;
+    }
+
+    .box {
+        &__one {
+        left: 150px;
+        }
+        &__two {
+        right: 135px;
+        }
+        &__three {
+            left: 35px;
+        }
+        &__four {
+            right: 52px;
+        }
+    }
+
+    .header__big {
+        font-size: 64px;
+        left: calc(50% - 310px);
+
+        &_title {
+            top: 515px;
+            font-size: 28px;
+            left: calc(50% - 300px);
+        }
+        &_city {
+            top: 555px;
+            left: calc(50% - 300px);
+        }
+    }
+
+}
+
+@media (max-width: 835px) {
+
+    .nav__header {
+        background-image: url(./img/car2.png);
+        background-size: cover;
+        z-index: 555;
+    }
+
+    .img-holder {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .img-car {
+        display: none;
+    }
+
+    .img-car2 {
+        display: block;
+    }
+
+    .header__big {
+        left: calc(50% - 150px);
+        width: 300px;
+
+        &_title {
+            top: 585px;
+            left: calc(50% - 115px);
+            width: 250px;
+        }
+        &_city {
+            left: calc(50% - 224px);
+            font-size: 12px;
+            top: 715px;
+        }
+    }
+
+    .box {
+        display: none;
+    }
+
+    .about__us {
+        grid-template-columns: repeat(6, 60px);
+
+        &_big {
+            grid-column: 1/6;
+            font-size: 24px;
+        }
+
+        &_bold {
+            grid-column: 1/6;
+            font-size: 24px;
+        }
+
+        &_text {
+            grid-column: 1/6;
+            font-size: 16px;
+        }
+    }
+
+    .card_swiper {
+        scale: 0.75;
+    }
+
+    .advantages {
+        grid-template-columns: repeat(6, 60px);
+    }
+
+    .reviews {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__content {
+            width: 460px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__big {
+            font-size: 24px;
+        }
+
+        &__text {
+            font-size: 16px;
+            text-align: center;
+        }
+
+        &_container {
+            scale: 0.75;
+        }
+        
+        &__icon {
+            display: none;
+        }
+
+        
+    }
+    .advantages__big {
+        font-size: 38px;
+    }
+
+    // .feedback__title {
+    //     display: none;
+    // }
+
+}
+
+
+@media (max-width: 500px) {
+
+
+    .header__big {
+
+        top: 340px;
+        font-size: 46px;
+        width: 300px;
+
+        &_title {
+            font-size: 14px;
+            top: 450px;
+            left: calc(50% - 125px);
+        }
+
+        &_city {
+            width: 220px;
+            text-align: center;
+            left: calc(50% - 110px);
+            top: 500px;
+        }
+    }
+
+    .about__us {
+        grid-template-columns: repeat(4, 40px);
+
+        &_big {
+            grid-column: 1/6;
+            font-size: 20px;
+            height: 28px;
+        }
+
+        &_bold {
+            grid-column: 1/6;
+            font-size: 20px;
+        }
+
+        &_text {
+            grid-column: 1/6;
+            font-size: 16px;
+            padding-top: 15px;
+        }
+    }
+
+    .advantages {
+        grid-template-columns: repeat(4, 40px);
+    }
+ 
+
+    .reviews {
+       
+        &__content {
+            width: 315px;
+
+        }
+     
+        &__big {
+            text-align: center;
+            line-height: 1.2;
+        }
+    }
+
+    .swiper-slide {
+        scale: 0.8;
+    }
+
+    .swiper {
+        height: 545px;
+    }
+    .card {
+
+        &__car {
+            height: 540px;
+        }
+        &__img {
+            width: 270px;
+        }
+    }
+
+    form {
+        scale: 1.0;
+    }
+
+    .footer {
+        &__big {
+            font-size: 38px;
+        }
+        &__text {
+            font-size: 14px;
+        }
+    }
+
+
+    
+}
